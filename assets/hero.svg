@@ -33,7 +33,7 @@
   <rect x="82" y="160" width="280" height="3" rx="1.5" fill="url(#accent)" filter="url(#glow)"/>
   <text x="80" y="202" fill="#A8B5CC" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="19" letter-spacing="2">SYSTEMS × AI ENGINEERING</text>
   <text x="80" y="240" fill="#E8ECF7" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="22" font-weight="500">Building computers from first principles.</text>
-  <text x="80" y="276" fill="#6F809D" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14">OS  /  CONTAINERS  /  NETWORKING  /  DATABASES  /  AI</text>
+  <text x="80" y="276" fill="#6F809D" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14">OS  /  RUNTIMES  /  NETWORKS  /  BROWSERS  /  ML</text>
 
   <g opacity="0.95">
     <rect x="790" y="91" width="310" height="166" rx="14" fill="#081220" stroke="#243A55"/>
