@@ -39,6 +39,7 @@ measure, document limits, repeat
 
 ## Research and applied systems
 
+- **[TinyDB](https://github.com/Lei-TzuY/tinydb-c)** — a compact SQL database in C with B+ tree storage, WAL recovery, transactions, secondary indexes, query execution, and cross-platform CI.
 - **[Intelligent Software Quality Assurance](https://github.com/Lei-TzuY/Quality_Assurance)** — an executable research prototype connecting machine-readable quality rules, runtime observations, traceability, and quantitative NFR scoring.
 - **[Candy Defect Detection](https://github.com/Lei-TzuY/candy_detect)** — an applied computer-vision prototype spanning multi-camera capture, model workflows, operator UI, recording, annotation, and reporting. Evaluation metrics remain a documented next step.
 - **[Picture Magician](https://github.com/Lei-TzuY/change-clothes)** — a Flask + ComfyUI virtual try-on and image-workflow prototype.
