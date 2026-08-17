@@ -1,108 +1,50 @@
 <p align="center">
-  <img src="./assets/hero.svg" width="100%" alt="LeiZ — Systems and AI Engineering" />
+  <img src="./assets/hero.svg" width="100%" alt="LeiZ — systems and machine-learning engineering" />
 </p>
 
 <p align="center">
-  <b>CS Student · Systems Builder · AI Engineer</b><br/>
-  <sub>From kernel primitives to neural networks — built to understand how the layers actually work.</sub>
+  <strong>Computer science student building systems from first principles.</strong><br />
+  <sub>Operating systems · Linux runtimes · networking · browser internals · version control · machine learning</sub>
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/C-systems-0B1220?style=flat-square&logo=c&logoColor=41D1FF" />
-  <img src="https://img.shields.io/badge/Go-runtimes-0B1220?style=flat-square&logo=go&logoColor=41D1FF" />
-  <img src="https://img.shields.io/badge/Python-AI-0B1220?style=flat-square&logo=python&logoColor=C35BFF" />
-  <img src="https://img.shields.io/badge/Linux-first-0B1220?style=flat-square&logo=linux&logoColor=F5F7FF" />
-</p>
+I build compact, inspectable implementations of the layers developers usually consume as abstractions. The common thread is not project count; it is turning an idea into code with explicit invariants, automated tests, reproducible commands, and honest scope boundaries.
 
----
+## Flagship work
 
-## `01 / flagship systems`
+| Project | What is implemented | Evidence to inspect |
+| --- | --- | --- |
+| **[miniOS](https://github.com/Lei-TzuY/minios-x86)** · C / x86 | Ring-3 userspace, preemptive scheduling, COW `fork`, demand paging, VFS, filesystems, signals and IPC | [native + QEMU tests](https://github.com/Lei-TzuY/minios-x86/tree/main/tests) · [CI](https://github.com/Lei-TzuY/minios-x86/actions/workflows/tests.yml) · [benchmarks](https://github.com/Lei-TzuY/minios-x86/blob/main/tests/BENCHMARKS.md) |
+| **[Mini Container Runtime](https://github.com/Lei-TzuY/mini-container-runtime)** · Go / Linux | Namespaces, cgroups v2, `pivot_root`, OverlayFS, veth networking, OCI image pulling, capabilities and seccomp | [package tests](https://github.com/Lei-TzuY/mini-container-runtime/tree/main/internal) · [CI](https://github.com/Lei-TzuY/mini-container-runtime/actions/workflows/tests.yml) · [documented limits](https://github.com/Lei-TzuY/mini-container-runtime#scope-and-limitations) |
+| **[Userspace TCP/IP Stack](https://github.com/Lei-TzuY/userspace-tcpip-stack)** · C99 | Packet parsing, PCAP/PCAPNG, reassembly, TCP state/stream analysis, protocol decoders and recursive tunnels | [fixtures + tests](https://github.com/Lei-TzuY/userspace-tcpip-stack/tree/main/tests) · [ASan/UBSan + fuzz CI](https://github.com/Lei-TzuY/userspace-tcpip-stack/actions/workflows/ci.yml) · [fuzz corpus](https://github.com/Lei-TzuY/userspace-tcpip-stack/tree/main/fuzz) |
+| **[Toy Browser Engine](https://github.com/Lei-TzuY/toy-browser-engine)** · Rust | HTML/CSS parsing, cascade, layout, painting, DOM/events, scripting, fetch, timers and microtasks | [unit + integration tests](https://github.com/Lei-TzuY/toy-browser-engine/tree/main/tests) · [CI](https://github.com/Lei-TzuY/toy-browser-engine/actions/workflows/tests.yml) · [architecture](https://github.com/Lei-TzuY/toy-browser-engine#architecture) |
+| **[pygit](https://github.com/Lei-TzuY/pygit-sha256)** · Python | Content-addressed objects, refs, index/worktree operations, history, packs and remote workflows using SHA-256 | [test suite](https://github.com/Lei-TzuY/pygit-sha256/tree/main/tests) · [Python 3.9/3.13 CI](https://github.com/Lei-TzuY/pygit-sha256/actions/workflows/tests.yml) · [internals guide](https://github.com/Lei-TzuY/pygit-sha256/blob/main/INTERNALS.md) |
+| **[Tiny Transformer + Autograd](https://github.com/Lei-TzuY/tiny-transformer-autograd)** · NumPy | Reverse-mode autodiff, GPT/Llama-style components, training, KV caching, checkpointing and numerical validation | [numerical/regression tests](https://github.com/Lei-TzuY/tiny-transformer-autograd/tree/main/tests) · [multi-version CI](https://github.com/Lei-TzuY/tiny-transformer-autograd/actions/workflows/tests.yml) · [benchmark entrypoint](https://github.com/Lei-TzuY/tiny-transformer-autograd/blob/main/src/benchmark.py) |
 
-<table>
-<tr>
-<td width="50%" valign="top">
-<h3><a href="https://github.com/Lei-TzuY/minios-x86">miniOS</a></h3>
-<p><code>C</code> <code>x86</code> <code>Kernel</code></p>
-<p>A bootable 32-bit operating system built from scratch: Ring-3 userspace, preemptive scheduling, COW fork, demand paging, mmap, signals, IPC and VFS.</p>
-<p><b>51 syscalls · 52 user programs · native + QEMU E2E tests</b></p>
-</td>
-<td width="50%" valign="top">
-<h3><a href="https://github.com/Lei-TzuY/mini-container-runtime">Mini Container Runtime</a></h3>
-<p><code>Go</code> <code>Linux</code> <code>OCI</code></p>
-<p>An educational container runtime built directly on Linux primitives: namespaces, cgroups v2, OverlayFS, veth networking, OCI images, capabilities and seccomp.</p>
-<p><b>Containers without hiding behind Docker abstractions.</b></p>
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-<h3><a href="https://github.com/Lei-TzuY/userspace-tcpip-stack">Userspace TCP/IP Stack</a></h3>
-<p><code>C</code> <code>Networking</code> <code>PCAP</code></p>
-<p>A portable userspace networking stack focused on protocol parsing, packet processing, PCAP workflows, sanitizers and fuzzing-oriented validation.</p>
-<p><b>Packets, parsers and edge cases — in userspace.</b></p>
-</td>
-<td width="50%" valign="top">
-<h3><a href="https://github.com/Lei-TzuY/tinydb-c">TinyDB</a></h3>
-<p><code>C</code> <code>Database</code> <code>Storage</code></p>
-<p>An educational relational database engine with B+ tree storage, secondary indexes, WAL recovery, transactions, query execution and inspection tooling.</p>
-<p><b>Storage internals over ORM magic.</b></p>
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-<h3><a href="https://github.com/Lei-TzuY/tiny-transformer-autograd">Tiny Transformer + Autograd</a></h3>
-<p><code>Python</code> <code>Autograd</code> <code>Transformer</code></p>
-<p>A reverse-mode automatic differentiation engine and GPT/Llama-style Transformer components implemented from fundamentals with numerical and regression tests.</p>
-<p><b>Learning deep learning by rebuilding the machinery.</b></p>
-</td>
-<td width="50%" valign="top">
-<h3><a href="https://github.com/Lei-TzuY/candy_detect">Candy Vision</a></h3>
-<p><code>YOLO</code> <code>CV</code> <code>Multi-camera</code></p>
-<p>A real-time visual inspection prototype covering inference, multi-camera capture, recording, annotation workflows and reporting.</p>
-<p><b>Applied AI that has to survive real inputs.</b></p>
-</td>
-</tr>
-</table>
-
----
-
-## `02 / research + applied ai`
-
-**[Intelligent Software Quality Assurance](https://github.com/Lei-TzuY/Quality_Assurance)** — executable research artifact connecting QA-XML, QA-SOA, QA-IUM, runtime monitoring, traceability and quantitative non-functional quality scoring.
-
-**[Picture Magician](https://github.com/Lei-TzuY/change-clothes)** — Flask + ComfyUI image workflow prototype spanning upload/inference APIs and application-level image generation/editing pipelines.
-
----
-
-## `03 / engineering philosophy`
+## How I approach engineering
 
 ```text
-$ cat principles.txt
-→ build from first principles
-→ prefer evidence over feature lists
-→ test unhappy paths, not only demos
-→ document limitations as seriously as capabilities
-→ understand the layer below the abstraction
+specify the invariant
+        ↓
+build the smallest complete path
+        ↓
+test boundaries and failure modes
+        ↓
+measure, document limits, repeat
 ```
 
-I am especially interested in **operating systems, runtimes, networking, storage, software quality and practical AI** — projects where correctness matters and the interesting work begins below the framework layer.
+- **Correctness over adjectives:** claims should point to a test, workflow, benchmark, or reproducible command.
+- **End-to-end where integration matters:** QEMU boots, generated packet fixtures, real socket tests, and installed-package smoke tests complement unit coverage.
+- **Adversarial validation:** sanitizers, fuzzing, mutation checks, numerical gradient checks, and malformed-input corpora are used where appropriate.
+- **Educational scope stated plainly:** these projects expose mechanisms; they do not claim production equivalence to Linux, Docker, Chrome, Git, or mature ML frameworks.
 
----
+## Research and applied systems
 
-## `04 / toolbox`
+- **[Intelligent Software Quality Assurance](https://github.com/Lei-TzuY/Quality_Assurance)** — an executable research prototype connecting machine-readable quality rules, runtime observations, traceability, and quantitative NFR scoring.
+- **[Candy Defect Detection](https://github.com/Lei-TzuY/candy_detect)** — an applied computer-vision prototype spanning multi-camera capture, model workflows, operator UI, recording, annotation, and reporting. Evaluation metrics remain a documented next step.
+- **[Picture Magician](https://github.com/Lei-TzuY/change-clothes)** — a Flask + ComfyUI virtual try-on and image-workflow prototype.
 
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=c,go,python,linux,git,sqlite,flask,dart,flutter,html,css,js&perline=12" alt="toolbox" />
-</p>
+## Current direction
 
----
+I am most interested in operating systems, runtimes, networking, storage, compilers, software quality, and ML infrastructure—especially work where correctness is observable and the layer below the abstraction is the interesting part.
 
-## `05 / github signal`
-
-<p align="center">
-  <img height="165" src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=Lei-TzuY&show_icons=true&theme=github_dark&hide_border=true&bg_color=050816&title_color=41D1FF&icon_color=7C5CFF&text_color=A8B5CC" alt="GitHub stats" />
-  <img height="165" src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api/top-langs/?username=Lei-TzuY&layout=compact&theme=github_dark&hide_border=true&bg_color=050816&title_color=41D1FF&text_color=A8B5CC" alt="Top languages" />
-</p>
-
-<p align="center">
-  <sub><code>LeiZ // build · break · measure · harden · repeat</code></sub>
-</p>
+<p align="center"><code>build · break · measure · harden · repeat</code></p>
