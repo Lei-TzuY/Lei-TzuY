@@ -50,26 +50,35 @@ A portable userspace TCP/IP stack and packet-analysis project in C.
 - Sanitizers and fuzzing-oriented validation
 
 ### [tinydb-c](https://github.com/Lei-TzuY/tinydb-c)
-A compact SQL database implementation in C.
+An educational relational database engine in C.
 
-- B+ tree indexing
+- B+ tree storage and indexing
 - WAL recovery and transactions
-- Query execution, indexes, and joins
+- Query execution, secondary indexes, and inspection tooling
 
 ### [Tiny Transformer + Autograd](https://github.com/Lei-TzuY/tiny-transformer-autograd)
 A from-scratch Transformer and automatic differentiation engine in Python.
 
-- Custom autograd engine
-- Transformer building blocks implemented from fundamentals
-- Numerical and regression testing
+- Custom reverse-mode autograd engine
+- GPT/Llama-style Transformer building blocks from fundamentals
+- Numerical, regression, and integration testing
 
 ## Applied AI & Product Work
 
 ### [Candy Defect Detection](https://github.com/Lei-TzuY/candy_detect)
-Computer-vision inspection workflow for production-style defect detection, including model training/inference, multi-camera monitoring, and reporting.
+Real-time visual inspection prototype with YOLO inference, multi-camera capture, model workflow, recording, annotation support, and reporting.
 
 ### [Picture Magician](https://github.com/Lei-TzuY/change-clothes)
 Flask + ComfyUI image workflow prototype covering image generation/editing flows, upload/inference APIs, and application-level integration.
+
+## Research & Software Quality
+
+### [Intelligent Software Quality Assurance](https://github.com/Lei-TzuY/Quality_Assurance)
+Executable research prototype connecting QA-XML, QA-SOA, QA-IUM, runtime monitoring, traceability, and quantitative non-functional quality scoring.
+
+- Minimal working example with simulated runtime telemetry
+- Automated tests for the executable method chain
+- Clear separation between demonstrated behavior and future empirical validation
 
 ## Toolbox
 
